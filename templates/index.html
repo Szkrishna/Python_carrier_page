@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>My Website</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,600&display=swap" rel="stylesheet">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+		<style type="text/css">
+			#banner{
+				width: 100%;
+				height: 360px;
+				object-fit: cover;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="container">
+			<h1 class="text-center mt-4 mb-4">My website</h1>
+			<img id="banner" class="img-fluid" src="static/home.jpg"  alt="work image">
+
+			<h2 class="text-center mt-5 mb-3">About Us</h2>
+			<p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur facilisis in metus id ultrices. Nulla eleifend eget felis ac commodo. Aenean non sapien a lorem tincidunt laoreet. Proin dictum lacus vel mollis ornare. Nullam eget viverra diam. Suspendisse congue efficitur eleifend. Aenean interdum ultricies volutpat. Sed purus ligula, faucibus sit amet neque sit amet, euismod porttitor ante. Ut eu sem mi. Sed gravida lectus condimentum, mollis turpis ac, elementum urna. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+			<p class='lead'>Vestibulum odio justo, cursus quis tortor in, fringilla feugiat odio. Pellentesque eu velit fringilla, tristique dui eu, rhoncus nulla. Phasellus sit amet ultrices risus. Pellentesque feugiat varius lacus in ornare. Praesent porta diam sed egestas tristique. Sed et tellus id arcu consequat facilisis id sed nunc. Integer in gravida dolor. Donec ac ullamcorper erat.</p>
+
+			<p class="lead">Duis et convallis sem. Praesent aliquet lacus vel pretium congue. Pellentesque mollis purus eu ligula lobortis, eget viverra risus semper. Vivamus viverra ante ac tellus eleifend, in dapibus orci aliquam. Vestibulum mollis aliquet felis et sagittis. Quisque dictum urna vel nibh lobortis mattis. In non molestie augue. Sed tellus tellus, commodo eget purus sit amet, pharetra vehicula magna. Vestibulum cursus eleifend congue. Ut commodo erat ligula, nec dignissim eros pharetra quis. Duis molestie libero leo, non congue dui porttitor non. Aliquam non imperdiet nisl. Aliquam pretium lacus eget tortor maximus dignissim. Etiam odio quam, accumsan sed orci vel, convallis feugiat dui. Aliquam sem tellus, cursus in ornare et, ultrices at lacus. Nunc et consequat lorem.</p><hr>
+	
+			<h2 class="text-center mt-5 mb-3">Job openings</h2>
+			<p class=para>
+				{% for job in jobs %}
+					{% include 'Jobs.html' %}
+				{% endfor %}
+			</p>
+			<div class="text-center">
+			<button type="button" class=" btn btn-primary btn-lg">Contact Us</button>
+		</div>
+		<div class="container ">
+			  <footer class="py-3 my-4">
+			    <!-- <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+			      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
+			      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
+			      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
+			      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+			      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
+			    </ul> -->
+			    <p class="text-center text-body-secondary">&copy; 2023 Company, Inc</p>
+			  </footer>
+		</div>
+	</body>
+</html>
